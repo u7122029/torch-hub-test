@@ -1,3 +1,5 @@
+dependencies = ['torch']
+
 import torch
 
 def custom_model():
@@ -6,7 +8,7 @@ def custom_model():
     and returns the model 
     """
     # load
-    path = 'iris_classifier.pt'
+    path = 'lbleal1/load_custom_model/iris_classifier.pt'
     model = torch.load(path)
     return model
 
