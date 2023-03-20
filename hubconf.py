@@ -8,7 +8,7 @@ def custom_model():
     """
     # load
     path = 'load_custom_model/iris_classifier.pt'
-    os.sys("pwd")
+    print(os.sys("pwd"))
     model = torch.load(path)
     return model
 
