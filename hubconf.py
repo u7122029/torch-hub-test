@@ -6,7 +6,7 @@ def custom_model():
     and returns the model 
     """
     # load
-    path = 'load_custom_model/iris_classifier.pt'
+    path = 'iris_classifier.pt'
     model = torch.load(path)
     return model
 
