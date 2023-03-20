@@ -1,4 +1,5 @@
 import torch
+import os
 
 def custom_model():
     """ # This docstring shows up in hub.help()
@@ -7,6 +8,7 @@ def custom_model():
     """
     # load
     path = 'load_custom_model/iris_classifier.pt'
+    os.sys("pwd")
     model = torch.load(path)
     return model
 
