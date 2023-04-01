@@ -6,7 +6,7 @@ __all__ = ['Model', 'model']
 
 # model
 class Model(nn.Module):
-    def __init__(self, input_size, hidden_size, output_size):
+    def __init__(self, input_size=3, hidden_size=128, output_size=3):
         super(self).__init__()
         self.layer1 = nn.Linear(input_size, hidden_size)
         self.layer2 = nn.Linear(hidden_size, output_size)
