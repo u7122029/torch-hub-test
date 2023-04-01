@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from typing import Any
 
 __all__ = ['Model', 'model']
 
