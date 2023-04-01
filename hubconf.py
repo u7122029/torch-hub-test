@@ -1,7 +1,7 @@
 dependencies = ['torch']
 
 import torch
-from model import Model
+#from model import Model
 
 def custom_model():
     """ # This docstring shows up in hub.help()
