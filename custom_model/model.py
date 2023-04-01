@@ -11,7 +11,7 @@ model_urls = {
 
 # model
 class Model(nn.Module):
-    def __init__(self, input_size=3, hidden_size=16, output_size=3)->None:
+    def __init__(self, input_size=3, hidden_size=16, output_size=4)->None:
         super(Model, self).__init__()
         self.layer1 = nn.Linear(input_size, hidden_size)
         self.layer2 = nn.Linear(hidden_size, output_size)
