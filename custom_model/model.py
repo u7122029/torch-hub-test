@@ -1,11 +1,12 @@
 import torch
 import torch.nn as nn
-from typing import Any
+
+__all__ = ['Model', 'model']
 
 # model
 class Model(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
-        super().__init__()
+        super(self).__init__()
         self.layer1 = nn.Linear(input_size, hidden_size)
         self.layer2 = nn.Linear(hidden_size, output_size)
 
@@ -16,11 +17,11 @@ class Model(nn.Module):
         x = nn.Softmax(dim=1)(x)
         return x
     
-def model(pretrained: bool = False) -> Model:
+def model(pretrained: bool = False, **kwargs: Any) -> Model:
     r"""
     
     """
-    model = Model()
+    model = Model(**kwargs)
     if pretrained:
         path = '..\model_resources\iris_classifier.pt'
         model = torch.load(path)
