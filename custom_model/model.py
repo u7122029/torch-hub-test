@@ -16,11 +16,11 @@ class Model(nn.Module):
         x = nn.Softmax(dim=1)(x)
         return x
     
-def model(pretrained: bool = False, **kwargs: Any) -> Model:
+def model(pretrained: bool = False) -> Model:
     r"""
     
     """
-    model = Model(**kwargs)
+    model = Model()
     if pretrained:
         path = '..\model_resources\iris_classifier.pt'
         model = torch.load(path)
