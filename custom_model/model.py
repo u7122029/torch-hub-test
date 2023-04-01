@@ -6,7 +6,7 @@ from torch.hub import load_state_dict_from_url
 __all__ = ['Model', 'model']
 
 model_urls = {
-    'model': 'https://github.com/lbleal1/torch-hub-test/blob/main/model_resources/iris_classifier_params.pt',
+    'model': 'https://github.com/lbleal1/torch-hub-test/raw/main/model_resources/iris_classifier_params.pt',
 }
 
 # model
