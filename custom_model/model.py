@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from typing import Any
 
 # model
 class Model(nn.Module):
@@ -14,3 +15,13 @@ class Model(nn.Module):
         x = self.layer2(x)
         x = nn.Softmax(dim=1)(x)
         return x
+    
+def model(pretrained: bool = False, **kwargs: Any) -> Model:
+    r"""
+    
+    """
+    model = Model(**kwargs)
+    if pretrained:
+        path = '..\model_resources\iris_classifier.pt'
+        model = torch.load(path)
+    return model
