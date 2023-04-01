@@ -4,7 +4,9 @@ from typing import Any
 
 __all__ = ['Model', 'model']
 
-path = '..\model_resources\iris_classifier.pt'
+model_urls = {
+    'model': 'https://github.com/lbleal1/torch-hub-test/blob/main/model_resources/iris_classifier_params.pt',
+}
 
 # model
 class Model(nn.Module):
@@ -20,11 +22,13 @@ class Model(nn.Module):
         x = nn.Softmax(dim=1)(x)
         return x
     
-def model(pretrained: bool = False, **kwargs: Any) -> Model:
+def model(pretrained: bool = False, progress: bool = True, **kwargs: Any) -> Model:
     r"""
     
     """
     model = Model(**kwargs)
     if pretrained:
-        model = torch.load(path)
+        state_dict = load_state_dict_from_url(model_urls['model'],
+                                              progress=progress)
+        model.load_state_dict(state_dict)
     return model
