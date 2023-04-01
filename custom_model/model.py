@@ -4,6 +4,8 @@ from typing import Any
 
 __all__ = ['Model', 'model']
 
+path = '..\model_resources\iris_classifier.pt'
+
 # model
 class Model(nn.Module):
     def __init__(self, input_size=3, hidden_size=128, output_size=3):
@@ -24,6 +26,5 @@ def model(pretrained: bool = False, **kwargs: Any) -> Model:
     """
     model = Model(**kwargs)
     if pretrained:
-        path = '..\model_resources\iris_classifier.pt'
         model = torch.load(path)
     return model
