@@ -13,6 +13,7 @@ def custom_model():
     model = torch.load(path)
     return model
 
+'''
 def custom_model_params():
     """ # This docstring shows up in hub.help()
     Loads a model given model parameters
@@ -23,4 +24,4 @@ def custom_model_params():
     model = Model()
     model.load_state_dict(torch.load(path))
     return model
-
+'''
